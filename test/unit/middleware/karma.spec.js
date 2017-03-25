@@ -202,7 +202,11 @@ describe('middleware.karma', () => {
 
     response.once('end', () => {
       expect(nextSpy).not.to.have.been.called
+<<<<<<< HEAD
       expect(response).to.beServedAs(200, 'CONTEXT\n<script type="text/javascript" src="/__proxy__/__karma__/absolute/first.js?sha123" crossorigin="anonymous"></script>\n<script type="application/dart" src="/__proxy__/__karma__/absolute/second.dart?sha456" crossorigin="anonymous"></script>')
+=======
+      expect(response).to.beServedAs(200, 'CONTEXT\n<script type="text/javascript" src="/__karma__/absolute/first.js?sha123"></script>\n<script type="application/dart" src="/__karma__/absolute/second.dart?sha456"></script>')
+>>>>>>> parent of 5690ffe... fix: Add crossorigin attribute to script HTML tags
       done()
     })
 
@@ -232,7 +236,11 @@ describe('middleware.karma', () => {
 
     response.once('end', () => {
       expect(nextSpy).not.to.have.been.called
+<<<<<<< HEAD
       expect(response).to.beServedAs(200, 'CONTEXT\n<script type="text/javascript" src="/__proxy__/__karma__/absolute/some/abc/a.js?sha" crossorigin="anonymous"></script>\n<script type="text/javascript" src="/__proxy__/__karma__/base/b.js?shaaa" crossorigin="anonymous"></script>')
+=======
+      expect(response).to.beServedAs(200, 'CONTEXT\n<script type="text/javascript" src="/__karma__/absolute/some/abc/a.js?sha"></script>\n<script type="text/javascript" src="/__karma__/base/b.js?shaaa"></script>')
+>>>>>>> parent of 5690ffe... fix: Add crossorigin attribute to script HTML tags
       done()
     })
 
@@ -286,7 +294,7 @@ describe('middleware.karma', () => {
     ])
 
     response.once('end', () => {
-      expect(response).to.beServedAs(200, 'CONTEXT\n<script type="text/javascript" src="http://some.url.com/whatever" crossorigin="anonymous"></script>')
+      expect(response).to.beServedAs(200, 'CONTEXT\n<script type="text/javascript" src="http://some.url.com/whatever"></script>')
       done()
     })
 
@@ -349,7 +357,11 @@ describe('middleware.karma', () => {
 
     response.once('end', () => {
       expect(nextSpy).not.to.have.been.called
+<<<<<<< HEAD
       expect(response).to.beServedAs(200, 'DEBUG\n<script type="text/javascript" src="/__proxy__/__karma__/absolute/first.js" crossorigin="anonymous"></script>\n<script type="text/javascript" src="/__proxy__/__karma__/base/b.js" crossorigin="anonymous"></script>')
+=======
+      expect(response).to.beServedAs(200, 'DEBUG\n<script type="text/javascript" src="/__karma__/absolute/first.js"></script>\n<script type="text/javascript" src="/__karma__/base/b.js"></script>')
+>>>>>>> parent of 5690ffe... fix: Add crossorigin attribute to script HTML tags
       done()
     })
 
